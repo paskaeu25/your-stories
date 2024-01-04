@@ -17,7 +17,7 @@ router.get(
 );
 
 // @desc    Logout
-// @route   POST /auth/logout
+// @route   /auth/logout
 
 router.get('/logout', (req, res, next) => {
   req.logout((err) => {
