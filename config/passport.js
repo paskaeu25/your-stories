@@ -39,8 +39,6 @@ module.exports = function (passport) {
     process.nextTick(() => {
       return cb(null, {
         id: user.id,
-        username: user.username,
-        picture: user.picture,
       });
     });
   });
@@ -50,4 +48,12 @@ module.exports = function (passport) {
       return cb(null, user);
     });
   });
+  // passport.deserializeUser((user, cb) => {
+  //   process.nextTick(() => {
+  //     return cb(null, {
+  //       name: user.displayName,
+  //       image: user.image,
+  //     });
+  //   });
+  // });
 };
