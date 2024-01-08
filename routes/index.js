@@ -19,7 +19,10 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
       name: req.user.firstName,
       stories,
     });
-  } catch (error) {}
+  } catch (error) {
+    console.error(error);
+    res.render('error/500');
+  }
 });
 
 module.exports = router;
