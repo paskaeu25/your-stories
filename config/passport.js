@@ -48,12 +48,4 @@ module.exports = function (passport) {
       return cb(null, user);
     });
   });
-  // passport.deserializeUser((user, cb) => {
-  //   process.nextTick(() => {
-  //     return cb(null, {
-  //       name: user.displayName,
-  //       image: user.image,
-  //     });
-  //   });
-  // });
 };
