@@ -15,8 +15,10 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
   try {
     const stories = await Story.find({ user: req.user.id }).lean();
 
+    console.log(req.user);
+
     res.render('dashboard', {
-      name: req.user.firstName,
+      name: req.user.name,
       stories,
     });
   } catch (error) {

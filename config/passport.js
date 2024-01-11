@@ -35,10 +35,11 @@ module.exports = function (passport) {
     )
   );
 
-  passport.serializeUser((user, cb) => {
-    process.nextTick(() => {
+  passport.serializeUser(function (user, cb) {
+    process.nextTick(function () {
       return cb(null, {
         id: user.id,
+        name: user.firstName,
       });
     });
   });
