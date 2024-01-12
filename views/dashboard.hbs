@@ -18,7 +18,7 @@
           <td><a href='/stories/{{_id}}'>{{title}}</a></td>
           <td>{{formatDate createdAt 'YYYY-MM-DD, LT'}}</td>
           <td><span class='dash-status'>{{status}}</span></td>
-          <td></td>
+          <td>{{{editIcon user ../user _id false}}}</td>
         </tr>
       {{/each}}
     </tbody>
