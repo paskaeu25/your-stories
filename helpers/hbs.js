@@ -30,15 +30,17 @@ module.exports = {
     }
   },
 
-  statusOptions: function (selectedStatus, options) {
-    const statuses = ['Public', 'Private'];
+  // Update the statusOptions helper in helpers/hbs.js
+  statusOptions: function (selectedStatus) {
+    const statuses = ['public', 'private'];
     return statuses
-      .map(
-        (status) =>
-          `<option value='${status}' ${
-            status.toLowerCase() === selectedStatus ? 'selected' : ''
-          }>${status}</option>`
-      )
+      .map((status) => {
+        const isSelected = status === selectedStatus;
+        const optionValue = status.charAt(0).toUpperCase() + status.slice(1); // Capitalize the first letter
+        return `<option value='${status}' ${
+          isSelected ? 'selected' : ''
+        }>${optionValue}</option>`;
+      })
       .join('');
   },
 };
