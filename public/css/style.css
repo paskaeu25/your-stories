@@ -16,3 +16,11 @@ p {
   float: left;
   margin-right: 10px;
 }
+
+.img-small {
+  width: 100px;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
