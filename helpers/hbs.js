@@ -29,4 +29,8 @@ module.exports = {
       return '';
     }
   },
+
+  eq: function (a, b) {
+    return a === b;
+  },
 };
