@@ -11,8 +11,10 @@
     <div class='row'>
       <div class='input-field'>
         <select id='status' name='status'>
-          <option value='public' {{#if (eq story.status 'public')}}selected{{/if}}>Public</option>
-          <option value='private' {{#if (eq story.status 'private')}}selected{{/if}}>Private</option>
+          {{#statusOptions story.status}}
+            <option value='public'>Public</option>
+            <option value='private'>Private</option>
+          {{/statusOptions}}
         </select>
         <label for='status'>Status</label>
       </div>

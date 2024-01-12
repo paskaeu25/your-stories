@@ -33,4 +33,12 @@ module.exports = {
   eq: function (a, b) {
     return a === b;
   },
+  statusOptions: function (selectedStatus, options) {
+    return ['public', 'private']
+      .map((status) => {
+        const isSelected = status === selectedStatus;
+        return options.fn({ status, isSelected });
+      })
+      .join('');
+  },
 };
