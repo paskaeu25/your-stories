@@ -30,15 +30,15 @@ module.exports = {
     }
   },
 
-  eq: function (a, b) {
-    return a === b;
-  },
   statusOptions: function (selectedStatus, options) {
-    return ['public', 'private']
-      .map((status) => {
-        const isSelected = status === selectedStatus;
-        return options.fn({ status, isSelected });
-      })
+    const statuses = ['Public', 'Private'];
+    return statuses
+      .map(
+        (status) =>
+          `<option value='${status}' ${
+            status.toLowerCase() === selectedStatus ? 'selected' : ''
+          }>${status}</option>`
+      )
       .join('');
   },
 };

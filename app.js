@@ -35,7 +35,6 @@ const {
   stripTags,
   truncate,
   editIcon,
-  eq,
   statusOptions,
 } = require('./helpers/hbs');
 
@@ -48,7 +47,6 @@ app.engine(
       stripTags,
       truncate,
       editIcon,
-      eq,
       statusOptions,
     },
     defaultLayout: 'main',
