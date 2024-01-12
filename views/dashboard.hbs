@@ -19,10 +19,11 @@
           <td>{{formatDate createdAt 'YYYY-MM-DD, LT'}}</td>
           <td><span class='dash-status'>{{status}}</span></td>
           <td>
+            {{! Edit story }}
             <a href='/stories/edit/{{_id}}' class='btn btn-float'>
               <i class='fas fa-edit'></i>
             </a>
-
+            {{! Delete the story }}
             <form action='/stories/{{_id}}' method='POST' id='deleteForm'>
               <input type='hidden' name='_method' value='DELETE' />
               <button class='btn red' type='submit'>
