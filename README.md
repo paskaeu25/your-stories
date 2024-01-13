@@ -59,8 +59,6 @@ GOOGLE_CLIENT_SECRET = [google oath20 api client secret]
 # Then simply start your app
 npm run start
 
-# Then start json server
-npm run start
 ```
 
 
