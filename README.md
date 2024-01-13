@@ -39,7 +39,7 @@ The easiest way to get started is to clone the repository:
 
 ```bash
 # Get the latest snapshot
-git clone https://github.com/paskaeu25/fit-blog myproject
+git clone https://github.com/paskaeu25/your-stories myproject
 
 # Change directory
 cd myproject
@@ -47,11 +47,20 @@ cd myproject
 # Install NPM dependencies
 npm install
 
+# Create config.env inside config folder
+
+# Add variables to config.env
+
+PORT = [desired port number]
+MONGO_URI = [your mongo db connection string]
+GOOGLE_CLIENT_ID = [google oath20 api client id]
+GOOGLE_CLIENT_SECRET = [google oath20 api client secret]
+
 # Then simply start your app
 npm run start
 
 # Then start json server
-npm run server
+npm run start
 ```
 
 
